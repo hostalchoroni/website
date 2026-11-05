@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hostal Nova Colonial – Propuestas de diseño</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/emblema-hostal-nova-colonial-kleiner-rand-192x142.jpg">
+<link rel="stylesheet" href="shared/base.css">
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f4f1ec; color: #1d2a2f; }
+  main { width: min(1180px, 100% - 2rem); margin: 0 auto; padding: 3rem 0 4rem; }
+  header { display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem; }
+  header img { border-radius: 10px; }
+  h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0; }
+  header p { margin: .3rem 0 0; color: #5b6b70; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .card { display: flex; flex-direction: column; text-decoration: none; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px -15px rgba(0,0,0,.3); transition: transform .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -18px rgba(0,0,0,.35); }
+  .preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: grid; place-items: end start; padding: 1.2rem; }
+  .preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .preview span { position: relative; font-size: 1.7rem; font-weight: 700; line-height: 1.05; }
+  .caribe .preview::after, .moderno .preview::after { content: ""; position: absolute; inset: 0; }
+  .caribe .preview::after { background: linear-gradient(transparent 30%, rgba(7,60,70,.85)); }
+  .caribe .preview span { color: #fff; z-index: 1; font-family: "Trebuchet MS", sans-serif; }
+  .colonial .preview { background: #fbf7f0; place-items: center; }
+  .colonial .preview img { position: static; width: 55%; height: 92%; border-radius: 999px 999px 4px 4px; }
+  .colonial .preview span { position: absolute; left: 1.2rem; bottom: 1rem; font-family: Georgia, serif; color: #b4532a; font-weight: 600; }
+  .moderno .preview { background: #0d1114; }
+  .moderno .preview img { inset: 12px 12px 12px 45%; width: auto; height: auto; border-radius: 14px; }
+  .moderno .preview::after { display: none; }
+  .moderno .preview span { color: #5eead4; font-family: ui-monospace, monospace; }
+  .body { padding: 1.2rem 1.3rem 1.5rem; }
+  .body h2 { font-size: 1.25rem; margin-bottom: .35rem; }
+  .body p { color: #5b6b70; margin: 0 0 .8rem; font-size: .95rem; }
+  .sw { display: flex; gap: .35rem; }
+  .sw i { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px #ddd; }
+  footer { margin-top: 3rem; color: #5b6b70; font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/emblema-hostal-nova-colonial-kleiner-rand-192x142.jpg" alt="" width="72" height="54">
+    <div>
+      <h1>Hostal Nova Colonial · Casa Nova</h1>
+      <p>Tres propuestas de diseño moderno y responsive. Elija una para verla.</p>
+    </div>
+  </header>
+  <div class="grid">
+    <a class="card caribe" href="caribe/">
+      <div class="preview"><img src="img/lanchamar-1600x765.jpeg" alt=""><span>Dos posadas,<br>un pedacito de Caribe.</span></div>
+      <div class="body">
+        <h2>1 · Caribe</h2>
+        <p>Alegre y tropical: foto grande del mar, tarjetas redondeadas, filtro de habitaciones y botón flotante de WhatsApp.</p>
+        <div class="sw"><i style="background:#0b7a75"></i><i style="background:#f6b93b"></i><i style="background:#ef6f53"></i><i style="background:#fbf5ea"></i></div>
+      </div>
+    </a>
+    <a class="card colonial" href="colonial/">
+      <div class="preview"><img src="img/2019-02-27-03.37.29-977x715.jpg" alt=""><span>Encanto<br>colonial</span></div>
+      <div class="body">
+        <h2>2 · Colonial</h2>
+        <p>Elegante y editorial: tipografía serif, arcos coloniales, terracota e índigo inspirados en la fachada del Hostal.</p>
+        <div class="sw"><i style="background:#b4532a"></i><i style="background:#1f3557"></i><i style="background:#e2a93b"></i><i style="background:#f6efe3"></i></div>
+      </div>
+    </a>
+    <a class="card moderno" href="moderno/">
+      <div class="preview"><img src="img/colonialdesdecatarata-988x726.jpeg" alt=""><span>selva<br>&amp; mar.</span></div>
+      <div class="body">
+        <h2>3 · Moderno</h2>
+        <p>Oscuro y minimalista: rejilla “bento”, paneles de vidrio, carruseles y barra de navegación tipo app en el móvil.</p>
+        <div class="sw"><i style="background:#0d1114"></i><i style="background:#5eead4"></i><i style="background:#fbbf24"></i><i style="background:#eef2f3"></i></div>
+      </div>
+    </a>
+  </div>
+  <footer>Sitio actual: <a href="https://hostalnovacolonial.github.io/">hostalnovacolonial.github.io</a></footer>
+</main>
+</body>
+</html>
